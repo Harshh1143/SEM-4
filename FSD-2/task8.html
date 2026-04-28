@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="a1" styles="fontSize:10px"></p>
+    <script>
+        size =15
+        function fun(){
+            let obj = document.getElementById('a1')
+            obj.innerHTML="HELLO"
+            obj.style.fontSize=size+'px'
+            if(size<=50){
+                size++
+            }
+        }
+        setInterval(fun,1000)
+    </script>
+</body>
+</html>

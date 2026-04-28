@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="a1"></p>
+    <button  onclick="fun1()">Click here</button>
+    <script>
+        size = 15
+        function fun(){
+            obj= document.getElementById("a1")
+            obj.innerHTML="Hello"
+            obj.style.fontSize=size+'px'
+            if(size<=51){
+                size++
+            }
+        }
+        function fun1(){
+            setInterval(fun,50)
+        }
+    </script>
+</body>
+</html>

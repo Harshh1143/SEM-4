@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="id"></p>
+    <script>
+        const fun = function(){
+            document.writeln("I am data")
+        }
+        setInterval(fun,5000)
+        setTimeout(()=>{
+            document.writeln("I am ES6")
+        },5000)
+        setTimeout(()=>{
+            document.getElementById('id').innerHTML="I am data"
+        },3000)
+    </script>
+</body>
+</html>

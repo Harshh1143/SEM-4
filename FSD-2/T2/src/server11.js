@@ -1,0 +1,5 @@
+expr = require('express')
+app = expr()
+f = require(/.api.js)
+app.use('/p',f)
+app.listen(5223)

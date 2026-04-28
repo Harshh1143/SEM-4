@@ -1,0 +1,7 @@
+path = require('path')
+var a = path.dirname("D:/B3 77/hello.txt")
+console.log(a)
+c = path.extname("D:/B3 77/hello.txt")
+console.log(c)
+d = path.parse("D:/B3 77/hello.txt")
+console.log(d)

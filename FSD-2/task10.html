@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="a" styles="fontSize:50px"></p>
+    <button id="b1" onclick="fun1()">Increase</button>
+    <button id="b2" onclick="fun2()">Stop</button>
+    <button id="b3" onclick="fun3()">Decrease</button>
+    <script>
+        var size =50
+        fun()
+        function fun(){
+            let obj = document.getElementById('a')
+            obj.innerHTML="Hello"
+            obj.style.fontSize=size+'px'
+        }
+        function fun1(){
+            setInterval(()=>{
+                if(size<=201){
+                    size = size+1
+                    fun()
+                }
+            },500)
+        }
+        function fun2(){
+            
+        }
+        function fun3(){
+            setInterval(()=>{
+                if(size>=20){
+                    size = size-1
+                    fun()
+                }
+            },500)
+        }
+    </script>
+</body>
+</html>
