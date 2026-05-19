@@ -1,3 +1,4 @@
+import "./App.css";
 import App2 from "./App2";
 import App3 from "./App3";
 export default function App() {
