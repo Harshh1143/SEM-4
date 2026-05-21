@@ -1,0 +1,13 @@
+# Python cache files
+*.pyc
+__pycache__/
+
+# Django/Python compiled files
+*.cpython-*
+
+# VS Code
+.vscode/
+
+# Environment files
+.env
+venv/
