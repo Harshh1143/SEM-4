@@ -2,8 +2,12 @@ import "./App.css";
 import App2 from "./App2";
 import App3 from "./App3";
 export default function App() {
+  const name = 'abc';
+  const mark = [1,2,3]
   return (
     <>
+      <h1>Welcome {name.toUpperCase()}</h1>
+      <h1>{mark.join(', ')}</h1>
       <h1>My first code </h1>
       <App2 />
       <App2 />
