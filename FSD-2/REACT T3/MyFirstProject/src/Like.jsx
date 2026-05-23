@@ -1,7 +1,7 @@
 export default function Like() {
   var like = 0;
   const b = () => {
-    like = like + 1;
+    var like = like + 1;
     document.getElementById("data22").innerText = "Like count : " + like;
   };
 
