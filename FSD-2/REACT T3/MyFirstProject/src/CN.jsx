@@ -1,8 +1,8 @@
 export default function CN (p){
   return (
     <>
-    <h1>Name: {p.name}</h1>
-    <h1>Age: {p.age}</h1>
+    <h3>Name: {p.name}</h3>
+    <h3>Age: {p.age}</h3>
     </>
   )
 }
