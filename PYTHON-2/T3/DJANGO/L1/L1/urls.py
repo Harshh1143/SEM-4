@@ -16,8 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app1.views import hello
+from app1.views import dataframe
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('welcome/',hello)
+    path('',dataframe)
 ]
