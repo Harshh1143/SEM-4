@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+/* body {
+  background-image: url('./assets/images.jpeg');
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend
+} */
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
