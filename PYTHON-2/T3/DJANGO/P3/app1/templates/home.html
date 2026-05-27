@@ -1,11 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Home</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-text">
+            <span class="eyebrow">Django project</span>
+            <h1>Build clean pages with one shared layout.</h1>
+            <p>This home page now uses a polished base template, responsive navigation, and reusable page sections.</p>
+            <div class="hero-actions">
+                <a class="btn btn-primary" href="{% url 'about' %}">Learn More</a>
+                <a class="btn btn-secondary" href="{% url 'contact' %}">Contact Us</a>
+            </div>
+        </div>
+        <div class="hero-media">
+            <img src="{% static 'images/temp.png' %}" alt="Project preview">
+        </div>
+    </section>
+
+    <section class="section grid">
+        <article class="card">
+            <h3>Fast Layout</h3>
+            <p>Every page shares the same navbar, spacing, and visual style.</p>
+        </article>
+        <article class="card">
+            <h3>Responsive</h3>
+            <p>The design adjusts neatly on desktop, tablet, and mobile screens.</p>
+        </article>
+        <article class="card">
+            <h3>Simple Code</h3>
+            <p>The templates stay small by extending one clean base file.</p>
+        </article>
+    </section>
+{% endblock %}

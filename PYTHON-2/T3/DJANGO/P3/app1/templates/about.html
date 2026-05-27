@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-</head>
-<body>
-    <h1>About Us</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <section class="simple-page">
+        <span class="eyebrow">About</span>
+        <h1>About Us</h1>
+        <p>This page is part of a Django project using template inheritance. The navbar and main design come from the shared base template.</p>
+    </section>
+{% endblock %}
