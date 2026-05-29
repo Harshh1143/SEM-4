@@ -7,6 +7,7 @@ import Color from '../Color.jsx'
 import Task2 from '../Task2.jsx'
 import Task5 from '../Task5.jsx'
 import Task6 from '../Task6.jsx'
+import Task7 from '../Task7.jsx'
 export default function MainR() {
   return (
     <Router>
@@ -57,6 +58,11 @@ export default function MainR() {
               task6
             </Link>
           </li>
+           <li>
+            <Link style={styles.link} to="/task7">
+              task7
+            </Link>
+          </li>
         </ul>
       </nav>
 
@@ -70,6 +76,7 @@ export default function MainR() {
         <Route path="/task2" element={<Task2 />} />
         <Route path='/task5' element={<Task5 />} />
         <Route path='/task6' element={<Task6 />} />
+        <Route path='/task7' element={<Task7 />} />
       </Routes>
     </Router>
   );
