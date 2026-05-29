@@ -5,7 +5,8 @@ import Contact from "./Contact";
 import Usi from '../Usi.jsx'
 import Color from '../Color.jsx'
 import Task2 from '../Task2.jsx'
-
+import Task5 from '../Task5.jsx'
+import Task6 from '../Task6.jsx'
 export default function MainR() {
   return (
     <Router>
@@ -46,6 +47,16 @@ export default function MainR() {
               task2
             </Link>
           </li>
+          <li>
+            <Link style={styles.link} to="/task5">
+              task5
+            </Link>
+          </li>
+          <li>
+            <Link style={styles.link} to="/task6">
+              task6
+            </Link>
+          </li>
         </ul>
       </nav>
 
@@ -57,6 +68,8 @@ export default function MainR() {
         <Route path="/usi" element={<Usi />} />
         <Route path="/color" element={<Color />} />
         <Route path="/task2" element={<Task2 />} />
+        <Route path='/task5' element={<Task5 />} />
+        <Route path='/task6' element={<Task6 />} />
       </Routes>
     </Router>
   );
