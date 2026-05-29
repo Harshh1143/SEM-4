@@ -2,26 +2,25 @@ import {useState} from 'react'
 
 export default function Task7() {
     const [res,setRes] = useState(0)
-    const [data,setData] = useState({})
+    const [data,setData] = useState({n1:'',n2:''})
 
     function h1 (e) {
         const {name,value } = e.target
         setData({...data,[name]:value})
     }
-    function calc(e) {
-        console.log(e)
-        const n1 = parseInt(e.target.n1)
-        const n2 = parseInt(e.target.n2)
-        if (e.target.name =='add') {
+    function calc(op) {
+        const n1 = Number(data.n1)
+        const n2 = Number(data.n2)
+        if (op =='add') {
             setRes(n1+n2)
         }
-        else if(e.target.name=='sub') {
+        else if(op=='sub') {
             setRes(n1-n2)
         }
-        else if(e.target.name=='mul') {
+        else if(op=='mul') {
             setRes(n1*n2)
         }
-        else if(e.target.name=='div') {
+        else if(op=='div') {
             setRes(n1/n2)
         }
 
@@ -29,12 +28,16 @@ export default function Task7() {
   return (
     <div>
         <form>
-            <input type='number' name='n1' onChange={h1}></input>
-            <input type='number' name='n2' onChange={h1}></input>
-            <button onClick={calc} name='add'>Add</button>
-            <button onClick={calc} name='sub'>Sub</button>
-            <button onClick={calc} name='mul'>Mul</button>
-            <button onClick={calc} name='div'>Div</button>
+            <input type='number' name='n1' value={data.n1} onChange={h1}></input>
+            <input type='number' name='n2' value={data.n2} onChange={h1}></input>
+            <br></br>
+            <button type='button' onClick={() => calc('add')}>Add</button>
+            <br></br>
+            <button type='button' onClick={() => calc('sub')}>Sub</button>
+            <br></br>
+            <button type='button' onClick={() => calc('mul')}>Mul</button>
+            <br></br>
+            <button type='button' onClick={() => calc('div')}>Div</button>
         </form>
         <h1>Answer of {data.n1} & {data.n2} is {res}</h1>
     </div>
