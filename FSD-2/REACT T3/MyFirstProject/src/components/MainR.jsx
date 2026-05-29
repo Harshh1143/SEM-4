@@ -10,6 +10,7 @@ import Task5 from '../Task5.jsx'
 import Task6 from '../Task6.jsx'
 import Task7 from '../Task7.jsx'
 import Todo from '../Todo.jsx'
+import Task9 from '../Task9.jsx'
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -22,6 +23,7 @@ const navItems = [
   { label: "Task 6", path: "/task6" },
   { label: "Task 7", path: "/task7" },
   { label: "Todo", path: "/todo" },
+  {label : 'Task9',path:'/task9'}
 ];
 
 export default function MainR() {
@@ -84,6 +86,7 @@ export default function MainR() {
           <Route path='/task6' element={<Task6 />} />
           <Route path='/task7' element={<Task7 />} />
           <Route path='/todo' element={<Todo/>} />
+          <Route path='/task9' element={<Task9/>} />
         </Routes>
       </div>
     </Router>
