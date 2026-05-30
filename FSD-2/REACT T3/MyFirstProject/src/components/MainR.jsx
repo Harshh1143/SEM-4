@@ -11,6 +11,8 @@ import Task6 from '../Task6.jsx'
 import Task7 from '../Task7.jsx'
 import Todo from '../Todo.jsx'
 import Task9 from '../Task9.jsx'
+import Task10 from '../Task10.jsx'
+import Task_spe  from "../Task_spe.jsx";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -23,7 +25,9 @@ const navItems = [
   { label: "Task 6", path: "/task6" },
   { label: "Task 7", path: "/task7" },
   { label: "Todo", path: "/todo" },
-  {label : 'Task9',path:'/task9'}
+  { label: "Task 9", path: "/task9" },
+  { label: "Task 10", path: "/task10" },
+  { label :"Task Special", path:'/task_spe'}
 ];
 
 export default function MainR() {
@@ -87,6 +91,8 @@ export default function MainR() {
           <Route path='/task7' element={<Task7 />} />
           <Route path='/todo' element={<Todo/>} />
           <Route path='/task9' element={<Task9/>} />
+          <Route path="/task10" element={<Task10 />} />
+          <Route path='/task_spe' element={<Task_spe/>} />
         </Routes>
       </div>
     </Router>
@@ -183,9 +189,13 @@ const styles = {
     position: "absolute",
     top: "calc(100% + 12px)",
     right: 0,
-    width: "230px",
+    width: "min(260px, calc(100vw - 32px))",
+    maxHeight: "min(420px, calc(100vh - 112px))",
+    overflowY: "auto",
+    overscrollBehavior: "contain",
+    boxSizing: "border-box",
     margin: 0,
-    padding: "10px",
+    padding: "8px",
     listStyle: "none",
     background: "rgba(15, 23, 42, 0.78)",
     border: "1px solid rgba(255, 255, 255, 0.18)",
@@ -193,21 +203,24 @@ const styles = {
     boxShadow: "0 24px 55px rgba(0, 0, 0, 0.36)",
     backdropFilter: "blur(20px)",
     WebkitBackdropFilter: "blur(20px)",
+    scrollbarWidth: "thin",
   },
 
   dropdownItem: {
-    margin: "2px 0",
+    margin: 0,
   },
 
   dropdownLink: {
     display: "block",
     width: "100%",
-    padding: "11px 12px",
-    borderRadius: "10px",
+    boxSizing: "border-box",
+    padding: "9px 12px",
+    borderRadius: "8px",
     color: "rgba(255, 255, 255, 0.86)",
     textDecoration: "none",
-    fontSize: "15px",
+    fontSize: "14px",
     fontWeight: "700",
+    lineHeight: 1.2,
   },
 
   activeLink: {
