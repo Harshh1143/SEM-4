@@ -14,6 +14,7 @@ import Task9 from '../Task9.jsx'
 import Task10 from '../Task10.jsx'
 import Task_spe  from "../Task_spe.jsx";
 import UR1 from '../UR1.jsx'
+import UR2 from '../UR2.jsx'
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -29,7 +30,8 @@ const navItems = [
   { label: "Task 9", path: "/task9" },
   { label: "Task 10", path: "/task10" },
   { label :"Task Special", path:'/task_spe'},
-  {label :'useReducer1',path:'/ur1'}
+  {label :'useReducer1',path:'/ur1'},
+  {label :'useReducer2',path:'/ur2'}
 ];
 
 export default function MainR() {
@@ -96,6 +98,7 @@ export default function MainR() {
           <Route path="/task10" element={<Task10 />} />
           <Route path='/task_spe' element={<Task_spe/>} />
           <Route path='/ur1' element={<UR1/>} />
+          <Route path='/ur2' element={<UR2/>} />
         </Routes>
       </div>
     </Router>
