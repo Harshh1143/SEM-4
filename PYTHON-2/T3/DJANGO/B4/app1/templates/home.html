@@ -1,12 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Home</h1>
-    <h1>{{students.0.name}}</h1>
-</body>
+    <form action="{% url 'home' %}" method="get">
+      <input
+        type="text"
+        name="search"
+        placeholder="Search by name"
+        value="{{request.GET.search}}"
+      />
+      <button type="submit">Search</button>
+    </form>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>Profile</th>
+        <th>Email</th>
+        <th>Marks</th>
+        <th>Birthdate</th>
+      </tr>
+      {% for student in students %}
+      <tr>
+        <td>{{student.name}}</td>
+        <td>{{student.roll}}</td>
+        <td><a href="{{student.profile}}">Profile</a></td>
+        <td>{{student.email}}</td>
+        <td>{{student.marks}}</td>
+        <td>{{student.birthdate}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
 </html>
