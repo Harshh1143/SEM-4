@@ -16,6 +16,8 @@ import Task_spe  from "../Task_spe.jsx";
 import UR1 from '../UR1.jsx'
 import UR2 from '../UR2.jsx'
 import Comp1 from '../Comp1.jsx'
+import UE2 from "../UE2.jsx";
+import Axios from '../Axios.jsx'
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -33,7 +35,9 @@ const navItems = [
   { label :"Task Special", path:'/task_spe'},
   {label :'useReducer1',path:'/ur1'},
   {label :'useReducer2',path:'/ur2'},
-  {label : 'comp1', path:'/comp1'}
+  {label : 'comp1', path:'/comp1'},
+  {label : 'UE2',path:'/ue2'},
+  {label : 'Axios',path:'/axios'}
 ];
 
 export default function MainR() {
@@ -102,6 +106,8 @@ export default function MainR() {
           <Route path='/ur1' element={<UR1/>} />
           <Route path='/ur2' element={<UR2/>} />
           <Route path='/comp1' element={<Comp1 />} />
+          <Route path='/ue2' element={<UE2 />} />
+          <Route path='/axios' element={<Axios />} />
         </Routes>
       </div>
     </Router>
