@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Search Filter</h1>
+    <form action="#" method="get">
+      <input
+        type="text"
+        name="search"
+        placeholder="search by name"
+      />
+      <button type="submit">Search</button>
+    </form><br><br><br>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>Roll no</td>
+      </tr>
+      {% for i in students %}
+        <tr>
+          <td>{{i.name}}</td>
+          <td>{{i.roll_no}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
