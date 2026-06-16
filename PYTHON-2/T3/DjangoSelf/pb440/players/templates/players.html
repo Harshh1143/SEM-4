@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Players</th>
+            <th>Runs</th>
+            <th>Balls</th>
+            <th>4s</th>
+            <th>6s</th>
+            <th>SR</th>
+            <th>Team</th>
+            <th>Opposition</th>
+        </tr>
+        {% for p in player %}
+        <tr>
+            <th>{{p.player}}</th>
+            <th>{{p.runs}}</th>
+            <th>{{p.balls}}</th>
+            <th>{{p.four}}</th>
+            <th>{{p.six}}</th>
+            <th>{{p.sr}}</th>
+            <th>{{p.team}}</th>
+            <th>{{p.opp}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
