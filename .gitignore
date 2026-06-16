@@ -21,3 +21,5 @@ PYTHON-2/T3/DjangoSelf/DjangoSelf/__pycache__/__init__.cpython-314.pyc
 PYTHON-2/T3/DjangoSelf/DjangoSelf/__pycache__/settings.cpython-314.pyc
 PYTHON-2/T3/DjangoSelf/DjangoSelf/__pycache__/wsgi.cpython-314.pyc
 PYTHON-2/T3/DjangoSelf/DjangoSelf/__pycache__/urls.cpython-314.pyc
+PYTHON-2/T3/DjangoSelf/app1/__pycache__/urls.cpython-314.pyc
+PYTHON-2/T3/DjangoSelf/app1/__pycache__/views.cpython-314.pyc
