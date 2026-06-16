@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Movies details</h1>
+    <form  method="GET">
+        Title <input type="text" name="title">
+        <br>
+        Year <input type="text" name="year" />
+        <br>
+        Director <input type="text" name="director" />
+        <button type="submit">Submit</button>
+    </form>
+    {% for m in movies %}
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <th>{{m.title}}</th>
+            <th>{{m.year}}</th>
+            <th>{{m.director}}</th>
+            <th>{{m.description}}</th>
+        </tr>
+    </table>
+    {% endfor %}
+</body>
+</html>
