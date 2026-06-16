@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Book List</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publication Year</th>
+        </tr>
+        {% for book in book %}
+        <tr>
+            <th>{{book.title}}</th>
+            <th>{{book.author}}</th>
+            <th>{{book.year}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
