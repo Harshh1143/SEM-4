@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Event Categories</title>
+  </head>
+  <body>
+    <h1>Event Categories</h1>
+    <ul>
+      {% for i in category %}
+      <li>{{i.categories}}</li>
+    </ul>
+    {% endfor %}
+    <br />
+    <a href="/events/">View Upcoming Events</a>
+  </body>
+</html>
