@@ -1,11 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>THis is student list </h1>
-</body>
+  </head>
+  <body>
+    <h1>This is student list</h1>
+    <table border="1">
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Subject</td>
+        <td>Score</td>
+      </tr>
+      {% for i in data %}
+      <tr>
+        <td> <a href="{% url 'info' i.id %} %"></a>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.sub}}</td>
+        <td>{{i.score}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
 </html>
