@@ -9,9 +9,9 @@
     <h1>Enter new student</h1>
     <form method="post">
         {% csrf_token %}
-        name : <input type="text" name="name">
-        score : <input type="number" name="score" >
-        subject : <input type="text" name="sub">
+        name : <input type="text" name="name" value={{stu.name}}>
+        score : <input type="number" name="score" value={{stu.score}}>
+        subject : <input type="text" name="sub"  value="{{stu.sub}}">
 
         <input type="submit" value="edit">
     </form>

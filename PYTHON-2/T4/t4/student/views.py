@@ -18,3 +18,18 @@ def add(requests) :
 
         return redirect('home')
     return render(requests,'add.html')
+
+def edit(requests,id):
+    stu = get_object_or_404(Student,id=id)
+    if requests.method=='POST' :
+        stu.name = requests.POST['name']
+        stu.score = requests.POST['score']
+        stu.sub = requests.POST['sub']
+        stu.save()
+        return redirect('home')
+    return render(requests,'edit.html',{'stu':stu})
+
+def delete(requests,id) :
+    stu = get_object_or_404(Student,id=id)
+    stu.delete()
+    return redirect('home')

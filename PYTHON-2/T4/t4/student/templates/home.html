@@ -16,13 +16,17 @@
       </tr>
       {% for i in data %}
       <tr>
-        <td> <a href="{% url 'info' i.id %}">{{i.id}}</a></td>
-        <td>{{i.name}}</td>
+        <td><a href="{% url 'info' i.id %}">{{i.id}}</a></td>
+        <td>{{i.name}} </td>
         <td>{{i.sub}}</td>
         <td>{{i.score}}</td>
+        <td><a href="{% url 'edit' i.id %}">Edit</a></td>
+        <td><a href="{% url 'delete' i.id %}">Delete</a></td>
       </tr>
       {% endfor %}
     </table>
-    👉👉 <a href="{% url 'add' %}">Add students</a>
+    <br>
+    👉👉 <a href="{% url 'add' %}">Add students</a>   <br> 
+
   </body>
 </html>
