@@ -14,14 +14,13 @@
         <td>Subject</td>
         <td>Score</td>
       </tr>
-      {% for i in data %}
+      
       <tr>
-        <td> <a href="{% url 'info' i.id %}">{{i.id}}</a></td>
+        <td> {{i.id}}</a></td>
         <td>{{i.name}}</td>
         <td>{{i.sub}}</td>
         <td>{{i.score}}</td>
       </tr>
-      {% endfor %}
-    </table>
+          </table>
   </body>
 </html>
