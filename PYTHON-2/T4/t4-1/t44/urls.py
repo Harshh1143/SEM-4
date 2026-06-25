@@ -1,5 +1,5 @@
 """
-URL configuration for t4 project.
+URL configuration for t44 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
@@ -19,6 +19,5 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('student.urls')),
-    path("",include('dashboard.urls'))
+    path("",include("account.urls"))
 ]
