@@ -11,22 +11,26 @@ def register(requests) :
     if requests.method=='POST' :
         form = UserCreationForm(requests.POST)
 
-    if form.is_valid() :
-        user = form.save()
-        login(requests,user)
+        if form.is_valid() :
+            user = form.save()
+            login(requests,user)
         return redirect('dashboard')
     else :
         form = UserCreationForm()
     return render(requests,'register.html',{'form':form})
 
 def user_login(requests) :
-    if requests.user.is_authenticated :
-        return redirect('dashboard')
+    # if requests.user.is_authenticated :
+    #     return redirect('dashboard')
     if requests.method=='POST' :
         form = AuthenticationForm(requests,data=requests.POST)
         if form.is_valid():
-            login(requests,form.get_user)
-            return redirect('home')
+            login(requests,form.get_user())
+        return redirect('home')
     else :
-            form - AuthenticationForm()
+        form = AuthenticationForm()
     return render(requests,'login.html',{'form':form})
+
+def user_logout(requests):
+    logout(requests)
+    return redirect('dashboard')
