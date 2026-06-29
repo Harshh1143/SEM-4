@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Player
 # Create your views here.
 def home(requests) :
@@ -11,3 +11,12 @@ def home(requests) :
 
 def welcome(requests) :
     return render(requests,'welcome.html')
+
+def add (requests) :
+    if requests.method=='POST' :
+        name = requests.POST['name']
+        innings = requests.POST['innings']
+        runs = requests.POST['runs']
+        Player.objects.create(name=name,innings=innings,runs=runs)
+        return redirect('home')
+    return render(requests,'add.html')
