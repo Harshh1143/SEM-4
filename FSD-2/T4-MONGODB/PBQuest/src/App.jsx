@@ -1,7 +1,10 @@
+import PB469 from "./PB469";
 
 
 export default function App() {
   return (
-    <div>App</div>
+    <div>
+      <PB469 />
+    </div>
   )
 }
