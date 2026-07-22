@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{% if product % }Edit {% else %}Add {% endif %}Product</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" value="{{product.name|default:''}}" required><br>
+        <input type="number" name="price" value="{{product.price|default:''}}" required> <br>
+        <input type="number" name="quantity" value="{{product.quantity|default:''}}" required> <br>
+        <textarea name="description" >{{product.description|default:''}}</textarea>
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'product_list' %}">Cancel</a>
+</body>
+</html>
