@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Add player</h2>
+    <form method="POST">
+        {% csrf_token %}
+        Name : <input type="text" name="name" > <br>
+        Country : <input type="text" name="country"> <br>
+        Bowling Style : <input type="text" name="bowl_style"> <br>
+        Batting Style : <input type="text" name="bat_style"> <br>
+        Age : <input type="number" name="age"> <br>
+        Runs Score : <input type="number" name="runs"> <br>
+        Wickets Taken : <input type="number" name="wicket"> <br>
+        <button type="submit">Save</button>
+    </form>
+  </body>
+</html>

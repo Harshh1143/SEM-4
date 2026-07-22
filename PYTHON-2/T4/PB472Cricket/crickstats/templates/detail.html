@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Detail of player : {{i.name}}</h2>
+    <table border="1">
+        <tr>
+            <td>Name</td>
+            <td>Country</td>
+            <td>Batting Style</td>
+            <td>Bowling Style</td>
+            <td>Age</td>
+            <td>Runs</td>
+            <td>Wickets</td>
+        </tr>
+        
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.country}}</td>
+            <td>{{i.bat_style}}</td>
+            <td>{{i.bowl_style}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.runs}}</td>
+            <td>{{i.wicket}}</td>
+        </tr>
+        
+    </table>
+    <h3><a href="{% url 'homepage' %}">Homepage</a></h3>
+    <h3><a href="{% url 'edit' i.pk %}">Edit</a></h3>
+    <h3><a href="{% url 'delete' i.pk %}">Delete</a></h3>
+
+</body>
+</html>

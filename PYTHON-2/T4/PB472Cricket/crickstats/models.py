@@ -7,7 +7,7 @@ class Cricket(models.Model) :
     bowl_style = models.CharField(max_length=100)
     age = models.IntegerField()
     runs = models.IntegerField()
-    wickets = models.IntegerField()
+    wicket = models.IntegerField()
 
     def __str__(self):
         return self.name 

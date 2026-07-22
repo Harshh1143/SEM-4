@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Edit player</h2>
+    <form method="POST">
+      {% csrf_token %} Name :
+      <input type="text" name="name" value="{{player.name}}" /> <br />
+      Country
+      <input
+        type="text"
+        name="country"
+        value="{{ player.country }}"
+      /><br /><br />
+
+      Batting Style
+      <input
+        type="text"
+        name="bat_style"
+        value="{{ player.bat_style }}"
+      /><br /><br />
+
+      Bowling Style
+      <input
+        type="text"
+        name="bowl_style"
+        value="{{ player.bowl_style }}"
+      /><br /><br />
+
+      Age
+      <input type="number" name="age" value="{{ player.age }}" /><br /><br />
+
+      Runs
+      <input type="number" name="runs" value="{{ player.runs }}" /><br /><br />
+
+      Wickets
+      <input
+        type="number"
+        name="wicket"
+        value="{{ player.wicket }}"
+      /><br /><br />
+
+      <input type="submit" value="Update" />
+    </form>
+  </body>
+</html>
