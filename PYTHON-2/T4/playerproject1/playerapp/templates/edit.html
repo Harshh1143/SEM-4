@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2>Edit Player</h2>
+<form method="POST">
+  <input type="text" placeholder="Name" name="name" value="{{players.name|default:''}}"/> <br />
+  <input type="number" placeholder="Test Innings" name="test_innings" value="{{players.test_innings|default:''}}"/> <br />
+  <input type="number" placeholder="Runs" name="runs" value="{{players.runs|defaukt:''}}"/> <br />
+  <button type="submit">Edit Player</button>
+</form>

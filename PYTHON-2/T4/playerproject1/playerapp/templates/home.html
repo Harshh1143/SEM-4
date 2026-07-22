@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+<h2>All players</h2>
+<form>
+  <input type="text" name="q" placeholder="Search by name " /> <br />
+  <button type="submit">Search</button>
+</form>
+<a href="{% url 'add' %}">Add New Players</a>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Test Innings</td>
+    <td>Runs</td>
+    <td>Actions</td>
+  </tr>
+  {% for i in players %}
+  <tr>
+    <td>{{i.name}}</td>
+    <td>{{i.test_innings}}</td>
+    <td>{{i.runs}}</td>
+    <td><a href="{% url 'edit' %}">Edit</a></td>
+    <td><a href="{% url 'delete' %}">Delete</a></td>
+  </tr>
+  {% endfor %}
+</table>
