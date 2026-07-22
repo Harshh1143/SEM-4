@@ -21,10 +21,10 @@ def product_create(request):
             description = request.POST['description']
         )
         return redirect('product_list')
-    return render(request,'product_list.html')
+    return render(request,'product_form.html')
 
 def product_edit(request,pk) :
-    product = get_object_or_404(request,pk=pk)
+    product = get_object_or_404(Product,pk=pk)
     if request.method=="POST" :
         product.name = request.POST['name']
         product.price = request.POST['price']
@@ -35,6 +35,6 @@ def product_edit(request,pk) :
     return render(request,'product_form.html',{'product':product})
 
 def product_delete(request,pk) :
-    product = get_object_or_404(request,pk=pk)
+    product = get_object_or_404(Product,pk=pk)
     product.delete()
     return redirect('product_list')
