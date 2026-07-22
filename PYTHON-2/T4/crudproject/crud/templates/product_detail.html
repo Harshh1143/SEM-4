@@ -10,8 +10,8 @@
     <h1>{{product.price}}</h1>
     <h1>{{product.quantity}}</h1>
     <h1>{{product.description}}</h1>
-    <a href="{% 'product_edit' product.pk %}">Edit</a>
-    <a href="{% 'product_delete' product.pk %}">Delete</a>
-    <a href="{% 'product_list' %}">Back</a>
+    <a href="{% url 'product_edit' product.pk %}">Edit</a>
+    <a href="{% url 'product_delete' product.pk %}">Delete</a>
+    <a href="{% url 'product_list' %}">Back</a>
   </body>
 </html>
