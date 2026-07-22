@@ -1,9 +1,10 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <h2>Add Player</h2>
 <form method="POST">
-    <input type="text" placeholder="Name" name="name"> <br>
-    <input type="number" placeholder="Test Innings" name="test_innings"> <br>
-    <input type="number" placeholder="Runs" name="runs"> <br>
-    <button type="submit">Add Player</button>
+    {% csrf_token %}
+  <input type="text" placeholder="Name" name="name" /> <br />
+  <input type="number" placeholder="Test Innings" name="test_innings" /> <br />
+  <input type="number" placeholder="Runs" name="runs" /> <br />
+  <button type="submit">Add Player</button>
 </form>
+{% endblock %}

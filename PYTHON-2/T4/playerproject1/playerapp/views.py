@@ -6,17 +6,18 @@ def home(request) :
     query = request.GET.get('q')
 
     if query :
-        players = Player.filter(name__icontains=query)
+        players = Player.objects.filter(name__icontains=query)
     return render(request,'home.html',{'players':players})
-
+def welcome(request) :
+    return render(request,"welcome.html")
 def add(request) :
     if request.method=="POST" :
         Player.objects.create(
             name = request.POST['name'],
-            test_innings = request.POST['test_innings1'],
+            test_innings = request.POST['test_innings'],
             runs = request.POST['runs']
         )
-        return redirect('home.html')
+        return redirect('home')
     return render(request,'add.html')
 
 def edit(request,pk) :
@@ -28,9 +29,9 @@ def edit(request,pk) :
 
         players.save()
         return redirect('home')
-    return render(request,'edit.html')
+    return render(request,'edit.html',{'players':players})
 
 def delete(request,pk) :
     players = get_object_or_404(Player,pk=pk)
     players.delete()
-    return redirect('home.html')
+    return redirect('home')

@@ -5,7 +5,7 @@
   <button type="submit">Search</button>
 </form>
 <a href="{% url 'add' %}">Add New Players</a>
-<table>
+<table border="1">
   <tr>
     <td>Name</td>
     <td>Test Innings</td>
@@ -17,8 +17,9 @@
     <td>{{i.name}}</td>
     <td>{{i.test_innings}}</td>
     <td>{{i.runs}}</td>
-    <td><a href="{% url 'edit' %}">Edit</a></td>
-    <td><a href="{% url 'delete' %}">Delete</a></td>
+    <td><a href="{% url 'edit' i.pk %}">Edit</a></td>
+    <td><a href="{% url 'delete' i.pk %}">Delete</a></td>
   </tr>
   {% endfor %}
+  {% endblock %}
 </table>
