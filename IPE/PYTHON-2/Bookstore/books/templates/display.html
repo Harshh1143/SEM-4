@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input
+        type="text"
+        name="q"
+        placeholder="Search books by name or author..."
+      />
+      <input type="submit" /> Search
+    </form>
+    {% for b in books %}
+
+    <li>
+      <ul>
+        <a href="{% url 'detail' b.pk %} ">{{b.title}}</a>
+      </ul>
+    </li>
+    {% endfor %}
+  </body>
+</html>
