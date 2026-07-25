@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>My movie app</h1>
+    <h3>Enter data</h3>
+    <form>
+      <label for="data">Data:</label>
+      <input type="text" name="q" placeholder="Search by Title" /><br /><br />
+      <button type="submit" >Search</button>
+    </form>
+    
+    <table border="1">
+        <tr>
+            <td>Title</td>
+            <td>Actor</td>
+            <td>Date of Release</td>
+        </tr>
+    {% for i in m %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.actor}}</td>
+        <td>{{i.date}}</td>
+    </tr>    
+    {% endfor %}
+    </table>
+  </body>
+</html>
