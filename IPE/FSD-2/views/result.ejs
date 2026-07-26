@@ -1,0 +1,24 @@
+<h2>Marks Details</h2>
+<table border="1">
+    <tr>
+        <td>T1</td>
+        <td>T2</td>
+        <td>T3</td>
+        <td>T4</td>
+    </tr>
+    <tr>
+        <td><%=t1 %></td>
+        <td><%=t2 %></td>
+        <td><%=t3 %></td>
+        <td><%=t4 %></td>
+    </tr>
+</table>
+<br>
+<h2>Total : <%= total %></h2>
+<% if (total>=35) {%>
+    <h3 style="color: greenyellow;">Pass</h3>
+
+<% } else {%>
+    <h3 style="color:red">Fail</h3>
+
+    <% } %>
