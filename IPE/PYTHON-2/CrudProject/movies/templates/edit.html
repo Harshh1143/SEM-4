@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="POST">
+      {% csrf_token %} 
+      Title : <input type="text" name="title" value="{{movies.title|default}}"/> <br />
+      Director : <input type="text" name="director" value="{{movies.director|default}}" /> <br />
+      Rating : <input type="number" name="rating" value="{{movies.rating|default}}"/> <br />
+      Release Date : <input type="date" name="date" value="{{movies.release|default}}"/> <br />
+      Description : <textarea name="description" value="{{movies.description|default}}" ></textarea> <br />
+      <input type="submit" /> Submit
+    </form>
+  </body>
+</html>
