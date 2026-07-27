@@ -8,12 +8,12 @@
   <body>
     <form method="POST">
       {% csrf_token %} 
-      Title : <input type="text" name="title" value="{{movies.title|default}}"/> <br />
-      Director : <input type="text" name="director" value="{{movies.director|default}}" /> <br />
-      Rating : <input type="number" name="rating" value="{{movies.rating|default}}"/> <br />
-      Release Date : <input type="date" name="date" value="{{movies.release|default}}"/> <br />
-      Description : <textarea name="description" value="{{movies.description|default}}" ></textarea> <br />
-      <input type="submit" /> Submit
+      Title : <input type="text" name="title" value="{{movies.title}}"/> <br />
+      Director : <input type="text" name="director" value="{{movies.director}}" /> <br />
+      Rating : <input type="number" name="rating" value="{{movies.rating}}"/> <br />
+      Release Date : <input type="date" name="release" value="{{movies.release}}"/> <br />
+      Description : <textarea name="description" value="{{movies.description}}" ></textarea> <br />
+      <input type="submit" /> 
     </form>
   </body>
 </html>

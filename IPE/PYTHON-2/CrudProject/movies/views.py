@@ -10,20 +10,20 @@ def movie(request) :
     return render(request,'display.html',{'movies':movies})
 
 def detail(request,pk) :
-    movies = get_object_or_404(Movie,pk=pk)
-    return render(request,"detail.html",{"movies":movies})
+    movies = get_object_or_404(Movie,id=pk)
+    return render(request,"detail.html",{"i":movies})
 
 def edit(request,pk) :
-    movies = get_object_or_404(Movie,pk=pk)
+    movie = get_object_or_404(Movie,id=pk)
     if request.method=="POST" :
-        movie.title = request.POST['title']
-        movie.director = request.POST['director']
-        movie.rating = request.POST["rating"]
-        movie.release = request.POST['release']
-        movie.description = request.POST['description']
-
+        movie.title = request.POST.get('title')
+        movie.director = request.POST.get('director')
+        movie.rating = request.POST.get("rating")
+        movie.release = request.POST.get('release')
+        movie.description = request.POST.get('description')
+        movie.save()
         return redirect("display")
-    return render(request,"edit.html",{'movies':movies})
+    return render(request,"edit.html",{'movies':movie})
 
 def create(request) :
     if request.method == "POST" :
@@ -35,5 +35,5 @@ def create(request) :
             description = request.POST['description']
         )
 
-        return redirect("detail")
+        return redirect("display")
     return render(request,'create.html')

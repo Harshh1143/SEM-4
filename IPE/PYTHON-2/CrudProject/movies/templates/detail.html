@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <table>
+    <table border="1">
         <tr>
             <td>Title</td>
             <td>Director</td>
@@ -15,15 +15,16 @@
             <td>Release Date</td>
             <td>Description</td>
         </tr>
-        {% for i in movies %}
+     
         <tr>
             <td>{{i.title}}</td>
             <td>{{i.director}}</td>
             <td>{{i.rating}}</td>
             <td>{{i.release}}</td>
             <td>{{i.description}}</td>
+            <td><a href="{% url 'edit' i.pk %}">Edit</a></td>
         </tr>
-        {% endfor %}
+     
     </table>
 </body>
 </html>
