@@ -1,0 +1,23 @@
+<!-- You are building a simple web page that includes a button with the ID "myButton.
+" You want to display an alert message when the button is clicked. Write the node js
+code to achieve this using event handling.
+Instructions: Create an HTML file with a button element that has the ID "myButton."
+Write the JavaScript code to add an event listener to the button element.
+ When the button is clicked, display an alert message that says, "Button Clicked!" -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <button id="myButton">Click here </button>
+    <script>
+       const btn = document.getElementById("myButton")
+       btn.addEventListener("click",function(){
+        alert("Button is clicked")
+       })
+    </script>
+ </body>
+ </html>
