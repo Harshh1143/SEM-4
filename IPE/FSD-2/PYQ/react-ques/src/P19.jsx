@@ -24,7 +24,7 @@ import { useState } from "react";
 export default function P19() {
   const [formdata, setFormdata] = useState({});
   const [res, setRes] = useState(0);
-  const [stocks,setStocks] = useState([])
+  const [stocks, setStocks] = useState([]);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -33,24 +33,43 @@ export default function P19() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (formdata.selling_quantity > formdata.purchase_quantity) {
+    if (
+      Number(formdata.selling_quantity) > Number(formdata.purchase_quantity)
+    ) {
       alert("Selling quantity cannot be more than purchase quantity.");
       return;
-    }
-    else {
-        setRes((Number(formdata.selling_price)-Number(formdata.purchase_price))*formdata.selling_quantity)
-        setStocks([...stocks,{...formdata,res}])
+    } else {
+      setRes(
+        (Number(formdata.selling_price) - Number(formdata.purchase_price)) *
+          Number(formdata.selling_quantity),
+      );
+      setStocks([...stocks, { ...formdata, res }]);
+      setFormdata({
+        name: "",
+        purchase_price: "",
+        purchase_quantity: "",
+        selling_price: "",
+        selling_quantity: "",
+      });
     }
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        Name : <input type="text" name="name" onChange={handleChange} /> <br />
+        Name :{" "}
+        <input
+          type="text"
+          name="name"
+          onChange={handleChange}
+          value={formdata.name || ""}
+        />{" "}
+        <br />
         Purchase Price :{" "}
         <input
           type="number"
           name="purchase_price"
+          value={formdata.purchase_price || ""}
           onChange={handleChange}
         />{" "}
         <br />
@@ -58,6 +77,7 @@ export default function P19() {
         <input
           type="number"
           name="purchase_quantity"
+          value={formdata.purchase_quantity || ""}
           onChange={handleChange}
         />{" "}
         <br />
@@ -65,6 +85,7 @@ export default function P19() {
         <input
           type="number"
           name="selling_price"
+          value={formdata.selling_price || ""}
           onChange={handleChange}
         />{" "}
         <br />
@@ -72,6 +93,7 @@ export default function P19() {
         <input
           type="number"
           name="selling_quantity"
+          value={formdata.selling_quantity || ""}
           onChange={handleChange}
         />{" "}
         <br />
@@ -86,7 +108,7 @@ export default function P19() {
           <td>Selling Quantity</td>
         </tr>
         {stocks.map((f) => (
-          <tr>
+          <tr key={f.id}>
             <td>{f.name}</td>
             <td>{f.purchase_price}</td>
             <td>{f.purchase_quantity}</td>
