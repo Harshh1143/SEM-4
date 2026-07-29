@@ -1,3 +1,4 @@
+import Comp1 from "./Comp1";
 import PC from "./PC";
 import MainR from "./routes/MainR";
 import UseState from "./UseState";
@@ -7,7 +8,7 @@ export default function App() {
     <div>
       {/* <MainR /> */}
       {/* <UseState /> */}
-      <PC />
+      <Comp1/>
     </div>
   )
 }
