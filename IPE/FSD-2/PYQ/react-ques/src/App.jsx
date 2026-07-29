@@ -1,5 +1,9 @@
+import P19 from "./P19";
+
 export default function App() {
   return (
-    <div>App</div>
+    <div>
+      <P19 />
+    </div>
   )
 }
