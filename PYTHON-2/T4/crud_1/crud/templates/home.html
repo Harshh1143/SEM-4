@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% for i in students %}
+    <p><a href="{% url 'detail' i.pk %}">{{i.name}}</a></p>
+    <a href="{% url 'delete' i.pk %}">Delete</a>
+    <a href="{% url 'edit' i.pk %}">Edit</a>
+    {% endfor %}
+    <a href="{% url 'create' %}">Create Student</a>
+  </body>
+</html>

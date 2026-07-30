@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="POST">
+      {% csrf_token %}
+      Name : <input type="text" name="name" value="{{students.name|default:''}}"/> <br />
+      Div : <input type="text" name="div" value="{{students.div|default:''}}" /> <br />
+      School : <input type="text" name="school" value="{{students.school|default:''}}" /> <br />
+      Rank : <input type="number" name="rank" value="{{students.rank|default:''}}" /> <br />
+      Marks : <input type="number" name="marks" value="{{students.marks|default:''}}" /> <br />
+      <input type="submit" /> Submit
+    </form>
+  </body>
+</html>
